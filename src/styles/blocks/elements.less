@@ -1,0 +1,178 @@
+.elements {
+    .container;
+    display: flex;
+    justify-content: space-between;
+    gap: 67px;
+    margin: 0px;
+
+    @media @bw768 {
+        .container;
+        flex-wrap: wrap;
+        gap: 100px;
+        margin-top: 200px;
+    }
+
+    @media @bw600 {
+        justify-content: center;
+    }
+
+
+
+    // прайс
+    &__prices {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 401px;
+
+        @media @bw768 {
+            max-width: 280px;
+        }
+    }
+
+    &__prices-title {
+        margin: 40px 0px 10px 0px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.35;
+
+        @media @bw768 {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 25px;
+        }
+
+        @media @bw600 {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 19px;
+        }
+    }
+
+    &__prices-description {
+        text-align: center;
+        margin: 0px;
+
+        @media @bw768 {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 19px;
+        }
+
+        @media @bw600 {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 18px;
+        }
+    }
+
+    // контакты
+    &__contacts>a {
+        text-decoration: none;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 401px;
+
+        @media @bw768 {
+            max-width: 280px;
+        }
+    }
+
+    &__contacts-title {
+        margin: 40px 0px 10px 0px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.35;
+
+        @media @bw768 {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 25px;
+        }
+
+        @media @bw600 {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 19px;
+        }
+    }
+
+    &__contacts-description {
+        text-align: center;
+        margin: 0px;
+
+        @media @bw768 {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 19px;
+        }
+
+        @media @bw600 {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 18px;
+        }
+    }
+
+    // преимущество
+    &__advantages {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 401px;
+
+        @media @bw768 {
+            display: block;
+            margin: 0 auto;
+            max-width: 280px;
+        }
+    }
+
+    &__advantages-img {
+        @media @bw768 {
+            margin-left: 85px;
+            margin-right: 85px;
+        }
+    }
+
+    &__advantages-title {
+        margin: 40px 0px 10px 0px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.35;
+
+        @media @bw768 {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 25px;
+        }
+
+        @media @bw600 {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 19px;
+        }
+    }
+
+    &__advantages-description {
+        text-align: center;
+        margin: 0px;
+
+        @media @bw768 {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 19px;
+        }
+
+        @media @bw600 {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 18px;
+        }
+    }
+}
