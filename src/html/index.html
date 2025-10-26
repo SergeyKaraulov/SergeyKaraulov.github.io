@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru" class="show-event-popup"> 
+<html lang="ru" class="show-event-popup">
 @@include('blocks/head.html')
 
 <body class="body">
   @@include('blocks/page-header.html')
-  
+
 
 
   <main class="main">
@@ -28,14 +28,14 @@
       <div class=" i-want">
         <p class="i-want__want">Я ХОЧУ:</p>
         <div class="i-want__btns">
-          <a href="#" class="btn i-want__btn i-want__btn--measure">Провести мероприятие</a>
+          <button type="button" id="js-eventOpenBtn" class="btn i-want__btn i-want__btn--measure">Провести мероприятие</button>
           <a href="#" class="btn i-want__btn i-want__btn--rent">Стать арендатором</a>
         </div>
       </div>
 
       <article class="about" id="article1">
         <div class="about__container">
-          <div class="about__title section-title">О НАС</div>
+          <h2 class="about__title section-title">О НАС</h2>
           <div class="about__title-block">
             <h4 class="about__project">Проект «Millennials» </h4>
             <p class="about__project-text">Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и
@@ -59,7 +59,7 @@
               <img src="assets/images/pic-2.jpg" alt="about2" />
             </picture>
           </div>
-          
+
           <div class="about__conclusion">
             <picture class="about__picture3">
               <img src="assets/images/pic-3.png" alt="about3" />
@@ -71,92 +71,24 @@
                 это было классно.</p>
               <div class="about__button">
                 <p class="about__button-text">Смотреть</p>
-              <button type="button" class="about__icon arrow">
-                <svg class="arrow__icon" width="92" height="62">
-                  <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                </svg>
-              </button>
+                <button type="button" class="about__icon arrow">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
 
-        </div>
+          </div>
       </article>
 
 
-      <section class="listing events__listing home__listing2" id="events">
-        <h2 class="listing__title section-title home__title">Мероприятия</h2>
-        <div class="listing__events-list">
-          <!-- prettier-ignore -->
-          @@loop('blocks/event-card.html', [
-          {
-          "class": "listing__event-card",
-          "img": "assets/images/events/Nirvana.jpg",
-          "alt": "nirvana",
-          "title": "Собираемся и слушаем альбом Nirvana. Nirvana",
-          "descr": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
-          "time": "07.12.2022 | начало 18.00",
-          "datetime": "2022-12-07T18:00"
-          },
-          {
-          "class": "listing__event-card",
-          "img": "assets/images/events/stuff.jpg",
-          "alt": "stuff",
-          "title": "Есть тема, нужно обсудить с HowStuffWorks",
-          "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.",
-          "time": "14.12.2022 | начало 18.30",
-          "datetime": "2022-12-14T18:30"
-          },
-          {
-          "class": "listing__event-card",
-          "a": "event.html",
-          "img": "assets/images/events/Sade.jpg",
-          "alt": "Sade",
-          "title": "Вечер | The Best of Sade",
-          "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
-          "time": "16.12.2022 | начало 20.00",
-          "datetime": "2022-12-16T20:00"
-          }
-          ])
-        </div>
       
-        <article class="home__slider">
-          <button type="button" class="home__arrow about__icon arrow">
-            <svg class="arrow__icon" width="92" height="62">
-              <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-            </svg>
-          </button>
-
-          <div class="home__mix-slider">
-            <svg class="arrow__icon about__icon home__slider1" width="15" height="2">
-              <use xlink:href="assets/icons/symbols.svg#slider1"></use>
-            </svg>
-            <svg class="arrow__icon about__icon home__slider1" width="15" height="2">
-              <use xlink:href="assets/icons/symbols.svg#slider2"></use>
-            </svg><svg class="arrow__icon about__icon home__slider1" width="15" height="2">
-              <use xlink:href="assets/icons/symbols.svg#slider3"></use>
-            </svg><svg class="arrow__icon about__icon home__slider1" width="15" height="2">
-              <use xlink:href="assets/icons/symbols.svg#slider4"></use>
-            </svg><svg class="arrow__icon about__icon home__slider1" width="15" height="2">
-              <use xlink:href="assets/icons/symbols.svg#slider5"></use>
-            </svg>
-          </div>
-
-
-          <button type="button" class="about__icon arrow">
-            <svg class="arrow__icon" width="92" height="62">
-              <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-            </svg>
-          </button>
-
-        </article>
-
-        <a href="events.html" class="listing__link link">Смотреть все</a>
-
-      </section>
 
 
 
 
+    @@include('blocks/wrapper.html')
 
 
 
@@ -165,43 +97,46 @@
       <section class="listing @@class" id="article">
         <h2 class="listing__title section-title">Блог</h2>
         <div class="listing__article-list">
-            <!-- prettier-ignore -->
-            @@loop('blocks/article-card.html', [
-            {
-            "class": "listing__article-card",
-            "img": "assets/images/blog/theatre.jpg",
-            "alt": "Theatre Photosession",
-            "title": "Фотосессия в стенах Театра драмы",
-            "descr": "Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было ",
-            "time": "26.11.2022",
-            "datetime": "2022-11-26T00:00"
-            },
-            {
-            "class": "listing__article-card",
-            "img": "assets/images/blog/exhibition.jpg",
-            "alt": "exhibition",
-            "title": "Выставка VR в Томске",
-            "descr": "Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.",
-            "time": "05.11.2022",
-            "datetime": "2022-11-05T00:00"
-            },
-            {
-            "class": "listing__article-card",
-            "img": "assets/images/blog/hangar.jpg",
-            "alt": "hangar",
-            "title": "Rocking radio в заброшенном ангаре",
-            "descr": "15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.",
-            "time": "01.11.2022",
-            "datetime": "2022-11-01T00:00"
-            }
-            ])
+          <!-- prettier-ignore -->
+          @@loop('blocks/article-card.html', [
+          {
+          "class": "listing__article-card",
+          "img": "assets/images/blog/theatre.jpg",
+          "alt": "Theatre Photosession",
+          "title": "Фотосессия в стенах Театра драмы",
+          "descr": "Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было ",
+          "time": "26.11.2022",
+          "datetime": "2022-11-26T00:00"
+          },
+          {
+          "class": "listing__article-card",
+          "img": "assets/images/blog/exhibition.jpg",
+          "alt": "exhibition",
+          "title": "Выставка VR в Томске",
+          "descr": "Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.",
+          "time": "05.11.2022",
+          "datetime": "2022-11-05T00:00"
+          },
+          {
+          "class": "listing__article-card",
+          "img": "assets/images/blog/hangar.jpg",
+          "alt": "hangar",
+          "title": "Rocking radio в заброшенном ангаре",
+          "descr": "15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.",
+          "time": "01.11.2022",
+          "datetime": "2022-11-01T00:00"
+          }
+          ])
         </div>
         <a href="#" class="listing__link link">Смотреть все</a>
-    </section>
+      </section>
+
+
 
       <article class="contacts" id="article2">
         <div class="contacts__title section-title">КОНТАКТЫ</div>
-        <img class="contacts__map" src="assets/images/contacts/map.jpg" alt="img4">
+        <div class="contacts__map" id="js-contactsMap"></div>
+        <!-- <img class="contacts__map" src="assets/images/contacts/map.jpg" alt="img4"> -->
         <div class="contacts__elements">
 
           <div class="contacts__address">
@@ -250,6 +185,13 @@
   @@include('blocks/page-footer.html')
 
   @@include('blocks/event-pp.html')
+
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="scripts/main.min.js"></script>
 
 </body>
 

@@ -1,7 +1,7 @@
-<div class="pp" id="eventPP">
+<div id="js-eventPP" class="pp">
     <div class="pp__wrapper">
         <div class="pp__sticky-close">
-            <a class="pp__x-btn x-btn" href="index.html">
+            <a class="pp__x-btn x-btn js-ppCloseBtn" href="index.html">
                 <svg class="x-btn__icon" width="60" height="60">
                     <use xlink:href="assets/icons/symbols.svg#close"></use>
                 </svg>
@@ -84,7 +84,7 @@
                     <div class="form__contacts">
                         <label class="field">
                             <span class="field__label">Телефон*</span>
-                            <input class="field__input field__input--contact" type="text" placeholder="Телефон" name="phone" required>
+                            <input class="field__input field__input--contact js-mobileMask" type="text" placeholder="Телефон" name="phone" required>
                         </label>
     
                         <label class="field">
@@ -118,7 +118,7 @@
                         Отправить
                     </button>
 
-                    <button type="button" class="form__close-btn">
+                    <button type="button" class="form__close-btn js-ppCloseBtn">
                         Закрыть
                     </button>
                 </div>
