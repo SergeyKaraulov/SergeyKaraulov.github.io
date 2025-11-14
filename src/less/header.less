@@ -1,0 +1,164 @@
+@breakpoint-laptop: 1340px;
+@breakpoint-tablet: 768px;
+@breakpoint-mobile: 320px;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: all 0.3s ease;
+  background-color: #f3f3f3;
+  .container {
+    height: 105px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+    position: relative;
+  }
+
+  &__burger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+
+    &.active {
+      background-image: url("../img/close.svg");
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .header__catalog-link {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #0154bb;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+
+    .action-btn {
+      transition: all 0.3s ease;
+
+      &:hover {
+        .action-btn__icon {
+          fill: #0154bb;
+          stroke: #0154bb;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 50px 0px #00000026;
+  }
+}
+
+// Адаптивность
+@media (max-width: @breakpoint-laptop) {
+  .header {
+    .container {
+      min-height: 70px;
+    }
+  }
+}
+.action-btn-text {
+  display: none;
+}
+@media (max-width: @breakpoint-tablet) {
+  .header__logo {
+    width: 55px;
+  }
+  .header {
+    .container {
+      padding-top: 10px;
+      height: 100px;
+    }
+    &__burger {
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/burger.svg");
+      display: flex;
+    }
+
+    &__nav {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      background: #f3f3f3;
+      transition: left 0.3s ease;
+      z-index: 999;
+
+      &.active {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        padding: 70px 30px;
+        margin-top: 100px;
+        left: 0;
+        .action-btn {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+        .action-btn-text {
+          display: block;
+        }
+      }
+
+      .nav__link {
+        font-size: 18px;
+      }
+    }
+
+    .container {
+      min-height: 60px;
+    }
+  }
+}
+
+@media (max-width: @breakpoint-mobile) {
+  .header__catalog-text {
+    display: none;
+  }
+  .header {
+    &__actions {
+      gap: 12px;
+
+      .action-btn {
+        padding: 6px;
+
+        &__icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .container {
+      min-height: 56px;
+    }
+  }
+}

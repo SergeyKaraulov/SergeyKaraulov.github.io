@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интернет-магазин</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.6/dist/jquery.inputmask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/i18n/ru.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__logo">
+          <a href="/" class="logo-link">
+            <img src="../img/logo.svg" alt="Логотип" />
+          </a>
+        </div>
+
+        <div class="header__catalog text-md">
+          <a href="catalog.html" class="header__catalog-link svg-button">
+            <img class="nav__link-img" src="../img/grid.svg" alt="Каталог" />
+            <span class="header__catalog-text">Каталог</span>
+          </a>
+        </div>
+
+        <div class="header__nav header__actions">
+          <a class="action-btn svg-button" href="#">
+            <img
+              class="action-btn__icon"
+              src="../img/heart.svg"
+              alt="Избранное"
+            />
+            <div class="action-btn-text">Избранное</div>
+          </a>
+          <a class="action-btn svg-button" href="#">
+            <img
+              class="action-btn__icon"
+              src="../img/bucket.svg"
+              alt="Корзина"
+            />
+            <div class="action-btn-text">Корзина</div>
+          </a>
+          <a class="action-btn svg-button" href="auth.html">
+            <img
+              class="action-btn__icon"
+              src="../img/log-in.svg"
+              alt="Личный кабинет"
+            />
+            <div class="action-btn-text">Личный кабинет</div>
+          </a>
+        </div>
+        <button class="header__burger" aria-label="Открыть меню"></button>
+      </div>
+    </header>
+  </body>
+</html>
